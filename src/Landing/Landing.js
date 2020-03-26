@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryChooser from './CategoryChooser';
 import VideoChatPicker from './VideoChatPicker/VideoChatPicker';
-import NetworkImage from './network.svg';
+import { ReactComponent as NetworkImage } from './network.svg';
 
 
 const VIDEOS = [{
@@ -36,20 +36,20 @@ const Landing = () => {
         },
         categoryChooserContainer: {
             marginLeft: "50px",
-            marginTop: "70px",
+            marginTop: "25px",
             marginRight: "15px"
         },
         videoChatPickerContainer: {
             height: "100%",
-            marginLeft: "20px",
-            marginTop: "70px"
+            marginLeft: "25px",
+            marginTop: "20px"
         }
     };
 
     return (<div style={styles.container}>
-        {/* <div style={{height: "60px"}}>
-            <NetworkImage />
-        </div> */}
+        <div style={{height: "60px", display: "flex", marginLeft: "50px", paddingTop: "15px"}}>
+            <NetworkImage height="60px" fill="white" />
+        </div>
         <div style={styles.content}>
         <div style={styles.categoryChooserContainer}>
             <CategoryChooser categories={["Lessons", "Workouts", "Chatting", "Politics", "Games"]} />
